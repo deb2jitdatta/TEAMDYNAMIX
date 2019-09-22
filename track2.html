@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATjXe8Jfk6jtGuZljoMY80oPv-ABZmNWw&callback=initMap" type="text/javascript"></script> -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4sBNENny27aSqu8i5RdL2Ua-3GCnKYu0&callback=initMap"></script> -->
+        <style>
+            #coverart{
+                background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.9)),to(rgba(0, 0, 0, 0.7))), url("taxi2.jpg");
+                background-attachment: fixed;
+                background-size: cover;
+                /* background-position: center; */
+                height: 70vh;
+                background-position: center;
+            	background-attachment: fixed;
+                position: relative;
+            }
+            section{
+                display: inline-block;
+                width: 100%;
+            }
+            .navbtn{
+                text-decoration: none; 
+                padding: 1% 0.5%;
+                margin: 2%;
+                float:right; 
+                display: inline-block;
+                margin: 1%;
+                color: white;
+                font-size: 3vh;
+	            border-bottom: 0.4vh solid rgba(0,0,0,0);
+            }
+            .navbtn:visited{
+                text-decoration: none; 
+                padding: 1% 0.5%;
+                margin: 2%;
+                float:right; 
+                display: inline-block;
+                margin: 1%;
+                color: white;
+                font-size: 3vh;
+	            border-bottom: 0.4vh solid rgba(0,0,0,0);
+            }
+            .navbtn:hover,.navbtn:active{
+                color:white;
+                text-decoration: none; 
+	            border-bottom: 0.4vh solid rgb(243, 240, 240);
+            }
+            #topic{
+                font-weight: bold;
+                font-size: 8vh;
+                color:rgba(243, 240, 240, 0.8);
+                margin: 1vh 12vh 1vh 2vh;
+                margin-left: 16vh;
+            }
+            h2{
+                /* padding-left: 45vw; */
+                text-align: center;
+                margin: 4vw 0vw 2vw 0vw;;
+            }
+            #abouttxt{
+                text-align: justify;
+                margin: 0vw 30vw 4vw 30vw;
+            }
+            #track{
+                width: 70vw;
+                height: 40vh;
+                background-color: rgba(172, 172, 172, 0.5);
+                margin: 2vw 15vw 2vw;
+                /* -webkit-clip-path: polygon(33% 12%, 90% 12%, 76% 29%, 76% 47%, 90% 66%, 33% 66%, 33% 48%, 18% 48%, 18% 29%);
+                clip-path: polygon(33% 12%, 90% 12%, 76% 29%, 76% 47%, 90% 66%, 33% 66%, 33% 48%, 18% 48%, 18% 29%); */
+            }
+            #charts{
+                background-color: rgba(172, 172, 172, 0.5);
+                
+            }
+            #animate {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                background-color: red;
+                z-index:10;
+                border-radius: 100%;
+                display: inline-block;
+            }
+            .bg-jung{
+                background-repeat: no-repeat;
+                position: relative;
+                width: 100%;
+                height: 2%;
+                background-size: 100%;
+            }
+.car1{
+    height: 15%;
+    position: relative;
+    top:7px;
+    animation: driveleft 5s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    animation-timing-function: linear;
+}
+.car2{
+    height: 15%;
+    position: relative;
+    bottom: 12%;
+    animation: drive 3s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    animation-timing-function: linear;
+}
+.car3{
+    height: 15%;
+    position: relative;
+    bottom: 3%;
+    animation: driveright 6s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    animation-timing-function: linear;
+}
+.race{
+    margin: 2vw 1vw;
+}
+
+#footer{
+    height: 15vh;
+    padding: 6vh 42vw;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+}
+
+@keyframes drive{
+    0%   {top: 0vw;left: 0px;}
+    10%  {top: 0vw;left:100px;}
+    20%  {top: 0vw;left:290px;}
+    30%  {top: 0vw;left:400px;}
+    40%  {top: 0vw;left:440px;}
+    50%  {top: 0vw;left:470px;}
+    60%  {top: 0vw;left:500px;}
+    75%  {top: 0vw;left:550px;}
+    100% {top: 0vw;left:600px;}
+}
+@keyframes driveleft{
+    0%   {top: 1.5vw;left: 0px;}
+    10%  {top: 1.4vw;left:250px;}
+    20%  {top: 1.3vw;left:360px;}
+    30%  {top: 1.1vw;left:480px;}
+    40%  {top: 0.5vw;left:530px;}
+    50%  {top: 0.3vw;left:600px;}
+    60%  {top: 0.15vw;left:680px;}
+    75%  {top: 0.1vw;left:750px;}
+    85%  {top: 0.6vw;left:790px;}
+    100% {top: 0vw;left:840px;}
+}
+@keyframes driveright{
+    0%   {top: 0vw;left: 0px;}
+    10%  {top: 0.2vw;left:250px;}
+    20%  {top: 0.5vw;left:360px;}
+    30%  {top: 0.9vw;left:480px;}
+    40%  {top: 1vw;left:530px;}
+    50%  {top: 1.4vw;left:600px;}
+    60%  {top: 1.8vw;left:680px;}
+    75%  {top: 2vw;left:750px;}
+    85%  {top: 2.1vw;left:780px;}
+    100% {top: 2.4vw;left:840px;}
+}
+        </style>
+    </head>
+    <body>
+        <section id="coverart">
+            <div style="width:80%; display: inline-block; margin: 8vh 4vh" id="nav">
+                <a class="navbtn" href="#about">ABOUT US</a>
+                <a class="navbtn" href="#disp">DEMO</a>
+                <!-- <a class="navbtn" href="#charts">CHARTS</a> -->
+            </div>
+            <p id="topic">PREDICTION BASED <br> ON NETWORK</p>
+        </section>
+        <section id="#about">
+            <div>
+                <h2>ABOUT US</h2>
+                <p id="abouttxt">
+                        Our product helps in predicting the movement of the vehicle based on the training dataset provided. It works on a linear predefined path as well as a path with multiple nodes. 
+                        We use the LSTM approach and train the custom dataset to give an optimal solution.
+                </p>
+            </div>
+        </section>
+        <section id="charts">
+            <h2>DEMO</h2>
+            <div id ="track">
+                <div class="bg-jung"></div>
+                <div class="race-road">
+                    <div class="race" style="display: inline-block;">
+                        <img class="car1" src="http://www.clker.com/cliparts/l/H/d/6/d/G/blue-car-top-view-hi.png">
+                        <div id="animate" style="display: inline-block;left:1200px;"></div>
+                    </div>
+                    <div class="race">
+                        <img class="car2" src="https://openclipart.org/image/2400px/svg_to_png/190171/SimpleYellowCarTopView.png">
+                        <div id="animate" style="display: inline-block;left:960px;"></div>
+                    </div>
+                    <div class="race">
+                        <img class="car3" src="https://openclipart.org/image/800px/svg_to_png/61201/simple-travel-car-top-view.png">
+                        <div id="animate" style="display: inline-block;left:1200px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+                <h6>&copy; TEAM DYNAMIX (September 2019)</h6>
+            </section>
+        <script src="track2.js"></script>
+    </body>
+</html>
+
